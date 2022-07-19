@@ -1,7 +1,7 @@
 # import all of the libaries you need at the top of the file
 # you may need to add more libraries to this list
 import numpy as np
-import random
+import random 
 
 # Write a function that prints your board based on a 
 # an array of how  the board is currently populated
@@ -9,13 +9,27 @@ import random
 def print_board(board_array):
     print("Printing board")
 
+    extra_line = ".  .  .  ."
+    
+    print(" . ", board_array[0][0], " . ", board_array[0][1], " . ", board_array[0][2]," . ") #This makes the first row 
+    print("",board_array[1][0], "   ", board_array[1][1], "   ", board_array[1][2],"   ", board_array[1][3])#This makes second row
+    print(" . ", board_array[2][0], " . ", board_array[2][1], " . ", board_array[2][2]," . ")#This makes fourth row
+    print(board_array[3][0], "  ", board_array[3][1], "  ", board_array[3][2],"  ", board_array[3][3])#This makes the fifth row
+    print(" .", board_array[4][0], " .", board_array[4][1], " .", board_array[4][2]," . ")#This is the sixest row
+
+    return
+
 # Write a function that creates a blank array of the 
 # correct size and shape to represent your board.
 # This function should return the array or the blank board.
 def init_board():
     print("Initializing a new board")
-
-    return 0 # placeholder
+    board = np.array([[' ', ' ', ' '],
+                      [' ', ' ', ' ', ' '],
+                      [' ', ' ', ' '],
+                      ['  ', '  ', '  ', '  '],
+                      ['  ','  ','  ','  ']] )
+    return board
 
 # Write a function that allows one player to take their entire turn.
 # It should return the new version of the board.
@@ -91,8 +105,10 @@ def play_game():
 
     # declare the board options
     board_options = np.array([['0', '1', '2'],
-                              ['3', '4', '5'],
-                              ['6', '7', '8']])
+                              ['3', '4', '5', '6'],
+                              ['7', '8', '9'],
+                              ['10', '11', '12', '13'],
+                              ['14','15','16','17']] )
 
     # print the board options
     print_board(board_options)
