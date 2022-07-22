@@ -13,9 +13,9 @@ def print_board(board_array):
     
     print(" . ", board_array[0][0], " . ", board_array[0][1], " . ", board_array[0][2]," . ") #This makes the first row 
     print("",board_array[1][0], "   ", board_array[1][1], "   ", board_array[1][2],"   ", board_array[1][3])#This makes second row
-    print(" . ", board_array[2][0], " . ", board_array[2][1], " . ", board_array[2][2]," . ")#This makes fourth row
-    print(board_array[3][0], "  ", board_array[3][1], "  ", board_array[3][2],"  ", board_array[3][3])#This makes the fifth row
-    print(" .", board_array[4][0], " .", board_array[4][1], " .", board_array[4][2]," . ")#This is the sixest row
+    print(" . ", board_array[2][0], " . ", board_array[2][1], " . ", board_array[2][2]," . ")#This makes 3 row
+    print(board_array[3][0], "  ", board_array[3][1], "  ", board_array[3][2],"  ", board_array[3][3])#This makes the 4 row
+    print(" .", board_array[4][0], " .", board_array[4][1], " .", board_array[4][2]," . ")#This is the 5 row
 
     return
 
@@ -104,11 +104,11 @@ def play_game():
     print("Entering play game")
 
     # declare the board options
-    board_options = np.array([['0', '1', '2'],
-                              ['3', '4', '5', '6'],
-                              ['7', '8', '9'],
-                              ['10', '11', '12', '13'],
-                              ['14','15','16','17']] )
+    board_options = np.array([['1', '3', '5'],
+                              ['2', '4', '6', '8'],
+                              ['7', '9', '11'],
+                              ['10', '12', '14', '16'],
+                              ['13','15','17','19']] )
 
     # print the board options
     print_board(board_options)
